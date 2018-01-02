@@ -30,40 +30,24 @@ $(function(){
         var imgDrawWidth=canvasWidth,imgDrawHeight=canvasHeight;
         var x = 0,y=0,endX=imgWidth,endY=imgHeight;
         var changeX,changeY;
-        if(imgWidth < canvasWidth || imgHeight < canvasHeight){
-            if(imgWidth < canvasWidth && imgHeight < canvasHeight){
-                if(canvasWidth / imgWidth > canvasHeight / imgHeight){
-                    changeY = 1;
-                }else{
-                    changeX = 1;
-                }
-            }else if(imgWidth < canvasWidth){
-                changeY = 1;
-            }else{
-                changeX = 1;
-            }
-        }else{
-            if(imgWidth / canvasWidth > imgHeight / canvasHeight){
-                changeX = 1;
-            }else{
-                changeY = 1;
-            }
-        }
-        if(changeX){
-            imgDrawWidth = canvasHeight / imgHeight * imgWidth;
-            x = (imgDrawWidth - canvasWidth) *  imgWidth/ canvasWidth;
-            endX = imgWidth - x;
-        }
-        else if(changeY){
+        if(imgWidth !== canvasWidth){
             imgDrawHeight = canvasWidth / imgWidth * imgHeight;
-            y = (imgDrawHeight - canvasHeight) *  imgHeight/ canvasHeight;
-            endY = imgHeight - y;
+            if(imgDrawHeight < canvasHeight){
+                imgDrawHeight = canvasHeight;
+                imgDrawWidth = canvasHeight / imgHeight * imgWidth;
+            }
         }
+        var data = {
+            x:(imgDrawWidth - canvasWidth ) / 2,
+            y:(imgDrawHeight - canvasHeight ) / 2,
+        };
+        data.width = imgDrawWidth - data.x * 2;
+        data.height = imgDrawHeight - data.y * 2;
         return {
-            x:x,
-            y:y,
-            width:endX - x,
-            height:endY - y,
+            x:data.x * imgWidth / imgDrawWidth,
+            y:data.y * imgHeight / imgDrawHeight,
+            width:data.width * imgWidth / imgDrawWidth,
+            height:data.height * imgHeight / imgDrawHeight,
         };
     }
     function drawImg(img , offset , canvasOffset){
