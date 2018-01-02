@@ -1,0 +1,33 @@
+<div class="text-center width-100-100 vote-join">
+    <%if(query.hasJoin){%>
+    <div class="pl-30 pr-20 pb-30">
+        <div class="pt-40 flex-center">
+            <img src="<%=sessionJson.wechat_info.headImg%>" class="head-img border-rad-100" alt="">
+            <div class="pl-20 fz-40" ><span vote-info="code"></span>号</div>
+        </div>
+        <div class="pt-60 fz-26">
+            <div class="btn btn-border margin-auto  fz-24 color-24 border-24 pl-30  btn-padding btn-lang-lang">您的票房 <span class="pl-30   " vote-info="count"></span></div>
+        </div>
+        <div class="pt-20 pb-20 fz-26">
+            <div class="btn btn-border margin-auto color-24 border-24 fz-24 pl-30  btn-padding btn-lang-lang">您的排名 <span class="pl-30   " vote-info="userIndex"></span></div>
+        </div>
+        <div class="mt-44 border-rad-10 border-221 pt-70 position-relative add-show-main border-104  border-rad-10 max-height-900 overflow-scroll">
+            <div class="btn-big back-24 color-white fz-30 pl-22 text-left fz-weight position-absolute left-0 top-0 border-rad-top-5">为您投票的TA</div>
+
+        </div>
+    </div>
+    <%}else{%>
+        <div class="pt-110 text-center">
+            <img src="/images/vote/photo.png" class="photo-img border-rad-100" alt="">
+            <div class="pt-36 fz-40 pb-30">上传你的参赛照片</div>
+            <div class="pt-110 pl-30 pr-30 pb-30">
+                <div class="border-b-221 pb-20">
+                    <input type="text" name="comment" class="fz-28 width-100-100 back-transparent" placeholder="简洁描述自己（1-8个字）" maxlength="8" />
+                </div>
+            </div>
+            <div class="pt-40 pr-20 pl-20">
+                <div class="back-24 color-white btn-big btn-border-rad fz-28 do-submit-btn">提交报名</div>
+            </div>
+        </div>
+    <%}%>
+</div>

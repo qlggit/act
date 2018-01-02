@@ -1,0 +1,64 @@
+*,body,html{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+html{
+  font-family:'PingFang sc', '微软雅黑';
+}
+body{
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  color: @color-24;
+  line-height: 1;
+}
+.placeholder(@fs:100%,@color:rgb(153,153,153)){
+  &::-webkit-input-placeholder { /* WebKit browsers */
+  font-size: @fs;
+  color:     @color;
+}
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: @fs;
+    color:     @color;
+    opacity:   1;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: @fs;
+    color:     @color;
+    opacity:   1;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: @fs;
+    color:@color;
+  }
+}
+.placeholder();
+.write-ellipsis{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.break-all{
+  word-break: break-all;
+}
+.break-none{
+  white-space: nowrap;
+}
+.cursor-pointer{
+  cursor:pointer;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+div::-webkit-scrollbar{
+  display: none;
+}
+.scrollbar-none{
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}

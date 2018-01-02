@@ -1,0 +1,275 @@
+.vote{
+  &-main{
+    padding-bottom:1.06rem;
+  }
+  &-footer{
+    height: 1.06rem;
+    padding-left:.06rem;
+    padding-right:.06rem;
+    padding-top:.06rem;
+    .foot-item{
+      padding-left:.4rem;
+      padding-right:.4rem;
+    }
+    .item-img{
+      width: .44rem;
+      height: .44rem;
+      background-size: 100% 100%;
+    }
+    .home{
+      background-image: url(/images/vote/foot-home.png);
+      &.active{
+        background-image: url(/images/vote/foot-home-active.png);
+      }
+    }
+    .join{
+      background-image: url(/images/vote/foot-join.png);
+      &.active{
+        background-image: url(/images/vote/foot-join-active.png);
+      }
+    }
+    .sort{
+      background-image: url(/images/vote/foot-sort.png);
+      &.active{
+        background-image: url(/images/vote/foot-sort-active.png);
+      }
+    }
+    .rule{
+      background-image: url(/images/vote/foot-rule.png);
+      &.active{
+        background-image: url(/images/vote/foot-rule-active.png);
+      }
+    }
+  }
+  &-home{
+    padding: .92rem .16rem .1rem .16rem;
+    .head-search{
+      position: fixed;
+      top:0;
+      left: .16rem;
+      right: .16rem;
+      padding-top:.16rem;
+      padding-bottom:.16rem;
+      width: 7.16rem;
+      .search-input-div{
+        width: 100%;
+        height: .6rem;
+      }
+      img{
+        height: .22rem;
+      }
+      input{
+        height: .28rem;
+        width: 1.8rem;
+        margin-left:.18rem;
+      }
+    }
+    .main{
+      padding: 0 .04rem 0 .04rem;
+      .item-list{
+        width: 3.46rem;
+        height: 4.72rem;
+        padding: .2rem .1rem .1rem .1rem;
+        .head-img{
+          width: .62rem;
+          height: .62rem;
+        }
+        .user-content{
+          width:2.64rem;
+        }
+        .content{
+          height: 3.48rem;
+          background-size: cover;
+          background-position: center;
+        }
+        .content-main{
+          padding-top:2.7rem;
+          .count{
+            font-size:.3rem;
+            color: @color-24;
+          }
+          .border{
+            border-radius: .1rem;
+            height: .54rem;
+            width: 2.6rem;
+            font-size:.32rem;
+            line-height:.50rem;
+            display:none;
+            margin: auto;
+            background: rgba(255,255,255,.8);
+            &.count{
+              display: block;
+            }
+          }
+          &.able{
+            background: rgba(0,0,0,.5);
+            padding-top:1.3rem;
+            .border{
+              display: block;
+            }
+            .vote-btn{
+              margin-top:.46rem;
+            }
+            .sort{
+              text-align: center;
+              color: white;
+            }
+            .count.border{
+              font-size:.38rem;
+              background: transparent;
+              margin: auto;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-join{
+    .photo-img{
+      width: 2.26rem;
+      height: 2.26rem;
+    }
+    .head-img{
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+    .join-item{
+      height: 1.1rem;
+      padding:.12rem 0;
+      background: white;
+      border-bottom: 1px solid @color-242;
+      &:last-child{
+        border-bottom: 0;
+      }
+      .head-img{
+        width: .8rem;
+        height: .8rem;
+        margin-left:.18rem;
+        margin-right:.18rem;
+      }
+      .item{
+        border-right:1px solid @color-242;
+        &:last-child{
+          border-right:0;
+        }
+      }
+      .left{
+        width: 2.44rem;
+      }
+      .center{
+        width: 1.94rem;
+        height: .8rem;
+        line-height:.8rem;
+      }
+      .right{
+        width: 2.54rem;
+        padding-left:.5rem;
+      }
+      .btn{
+        border: 1px solid @color-194;
+        font-size:.28rem;
+        line-height:.52rem;
+        &.able{
+          border: 1px solid @color-24;
+        }
+      }
+    }
+  }
+  &-sort{
+    .sort-item{
+      height: 1.2rem;
+      padding-top: .2rem;
+      padding-bottom:.2rem;
+      background: white;
+      border-bottom: 1px solid @color-242;
+      .item{
+        height: .8rem;
+        line-height:.8rem;
+        border-right:1px solid @color-242;
+        &:last-child{
+          border-right:0;
+        }
+      }
+      .sort{
+        width: .9rem;
+        .num{
+          width: .48rem;
+          height: .48rem;
+          line-height:.48rem;
+          background-image: url(/images/ico/num.png);
+          background-size: 100% 100%;
+        }
+      }
+      .user{
+        width: 2.28rem;
+        .head-img{
+          width: .73rem;
+          height: .73rem;
+        }
+        .img-back{
+          width: .82rem;
+          min-width: .82rem;
+          height: .88rem;
+          position: relative;
+          background-image:url(/images/vote/sort-img-back.png) ;
+          background-size: 100% 100%;
+          .head-img{
+            position: absolute;
+            left: .02rem;
+            bottom: .02rem;
+          }
+        }
+      }
+      .count{
+        width: 1.5rem;
+      }
+      .btn-content{
+        width: 2.25rem;
+      }
+      .btn{
+        border: 1px solid @color-194;
+        font-size:.28rem;
+        line-height:.52rem;
+        &.able{
+          border: 1px solid @color-24;
+        }
+      }
+      &:last-child{
+        border-bottom: 0;
+      }
+    }
+  }
+  &-rule{
+    .banner{
+      height: 3.7rem;
+    }
+    .head-title{
+      padding-top:.12rem;
+      padding-bottom:.12rem;
+      .text{
+        height: .54rem;
+        border-top:1px solid @color-24;
+        border-bottom:1px solid @color-24;
+        line-height:.50rem;
+      }
+    }
+    .left-title{
+      width: 1.64rem;
+      height: .46rem;
+      line-height:.46rem;
+      background-image: url(/images/vote/title.png);
+      background-size: 100% 100%;
+    }
+    .prize-main{
+      .item{
+        width: 6.9rem;
+        height: 2.6rem;
+        padding-top:.44rem;
+        .left{
+          width: 1.9rem;
+        }
+      }
+    }
+  }
+}
