@@ -1,29 +1,33 @@
 <% title=resJson.voteData.info.actName%>
 <% include ../../layouts/header.htm%>
 <div class="width-100-100 height-100-100 back-242 overflow-scroll">
-    <canvas id="user-info-canvas"></canvas>
-    <div class="pt-20 pb-20 pl-20 pr-30 flex-between">
-        <img src="<%=resJson.voteInfo.headimg%>" class="head-img border-rad-100" alt="">
-        <div class="pl-10 width-50-100">
-            <div class="fz-26 color-24 fz-weight"><%=resJson.voteInfo.nickname%></div>
-            <div class="pt-10 fz-24 color-104"><%=resJson.voteInfo.comment%></div>
-        </div>
-        <div class="pl-10 width-50-100 text-right pt-10 fz-32">
-            <%=resJson.voteInfo.code%>号
-        </div>
+    <div class="position-relative main-img">
+        <canvas id="user-info-canvas" class="width-100-100"></canvas>
+        <img src="" class="show-back-img" style="display: none;" alt="">
+        <div class="fz-26 color-white position-absolute width-100-100 text-center left-0 show-notice-content">长按二维码保存并分享</div>
     </div>
+    <!--<div class="pt-20 pb-20 pl-20 pr-30 flex-between">-->
+        <!--<img src="<%=resJson.voteInfo.headimg%>" class="head-img border-rad-100" alt="">-->
+        <!--<div class="pl-10 width-50-100">-->
+            <!--<div class="fz-26 color-24 fz-weight"><%=resJson.voteInfo.nickname%></div>-->
+            <!--<div class="pt-10 fz-24 color-104"><%=resJson.voteInfo.comment%></div>-->
+        <!--</div>-->
+        <!--<div class="pl-10 width-50-100 text-right pt-10 fz-32">-->
+            <!--<%=resJson.voteInfo.code%>号-->
+        <!--</div>-->
+    <!--</div>-->
     <div class="pl-30 pr-30">
-        <div style="background-image: url(<%=resJson.voteInfo.img%>);" class="border-rad-5 border-221 width-100-100 main-img"></div>
-        <div class="pt-20 flex-between fz-28">
-            <div><%=resJson.voteInfo.comment%></div>
-            <div class="btn-sm border-24 text-center show-count" count="<%=resJson.voteInfo.count%>"><%=resJson.voteInfo.count%>票</div>
-        </div>
-        <div class="pt-40">
+        <!--<div style="background-image: url(<%=resJson.voteInfo.img%>);" class="border-rad-5 border-221 width-100-100 main-img"></div>-->
+        <!--<div class="pt-20 flex-between fz-28">-->
+            <!--<div><%=resJson.voteInfo.comment%></div>-->
+            <!--<div class="btn-sm border-24 text-center show-count" count="<%=resJson.voteInfo.count%>"><%=resJson.voteInfo.count%>票</div>-->
+        <!--</div>-->
+        <div class="pt-26">
             <div code="<%=resJson.voteInfo.id%>" class="btn btn-big border-24 fz-28 color-24 btn-border-rad flex-center vote-btn <%=resJson.voteInfo.isVote?'':'able'%>">
                 <div  class="btn-ico vote-ico"></div><div class="pl-10"><%=resJson.voteInfo.isVote?'已投票':'为TA投票'%></div>
             </div>
         </div>
-        <div class="pt-40 pb-30">
+        <div class="pt-20 pb-20">
             <div do-href-link="/vote/view/join/<%=resJson.voteInfo.voteId%>"  class="btn btn-big border-24 fz-28 color-24 btn-border-rad flex-center  <%=resJson.hasJoin?'':'able'%>">
                 <div  class="btn-ico join-ico"></div><div class="pl-10"><%=resJson.hasJoin?'我的参与':'我要参与'%></div>
             </div>

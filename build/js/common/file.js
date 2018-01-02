@@ -64,7 +64,7 @@ WY.getLocationImg = function(url , call){
         return call && call(url);
     }
     var xhr = new XMLHttpRequest();
-    xhr.open('get', url, true);
+    xhr.open('get', '/file/download?url='+url, true);
     xhr.responseType = 'blob';
     xhr.onload = function() {
         if(xhr.status === 200){
