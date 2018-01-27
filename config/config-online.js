@@ -29,7 +29,7 @@ module.exports = {
         dbname:'act'
     },
     mysqlOptions:{
-        host:'rm-uf6f0pnlca8085p8zo.mysql.rds.aliyuncs.com',
+        host:'rm-uf6f0pnlca8085p8z.mysql.rds.aliyuncs.com',
         user:'root',
         password :'CQyuke000!',
         database :'yukeh5'

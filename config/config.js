@@ -2,9 +2,9 @@
 module.exports = {
     "port":3006,
     debug:0,
-    "h5Api":"http://192.168.1.119:3002",
-    apiUrl:'http://192.168.1.122:8012',
-    "wechatLoginUrl":'http://h5.yukew.com/wechat/entrance/test?port=3006&host=192.168.1.119',
+    "h5Api":"http://192.168.1.109:3002",
+    apiUrl:'http://192.168.1.105:8012',
+    "wechatLoginUrl":'http://h5.yukew.com/wechat/entrance/test?port=3006&host=192.168.1.109',
     wechatJssdkUrl:'http://h5.yukew.com/wechat/jssdk/test?port=3006',
     "log4js":{
         "customBaseDir" :"/logs/",
@@ -29,17 +29,17 @@ module.exports = {
         port:'27017',
         dbname:'act'
     },
-    mysqlOptions:{
-        host:'127.0.0.1',
-        user:'root',
-        password :'mysqltest',
-        database :'yukew'
-    },
     // mysqlOptions:{
-    //     host:'rm-uf6f0pnlca8085p8zo.mysql.rds.aliyuncs.com',
+    //     host:'127.0.0.1',
     //     user:'root',
-    //     password :'CQyuke000!',
-    //     database :'yukeh5'
+    //     password :'mysqltest',
+    //     database :'yukew'
     // },
+    mysqlOptions:{
+        host:'rm-uf6f0pnlca8085p8zo.mysql.rds.aliyuncs.com',
+        user:'root',
+        password :'CQyuke000!',
+        database :'yukeh5'
+    },
 };
 

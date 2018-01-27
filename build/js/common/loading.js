@@ -20,7 +20,7 @@
             var start = 0;
             var startColor = '#ff0042',endColor = 'black';
             function createLinearGradient(){
-                var grd=ctx.createLinearGradient(-width/2,0,width*3/2,0);
+                var grd=ctx.createLinearGradient(-width/2,0,width*3/2,width);
                 grd.addColorStop((start)%1,startColor);
                 grd.addColorStop((start+1/12)%1,startColor);
                 grd.addColorStop((start+3/12)%1,endColor);

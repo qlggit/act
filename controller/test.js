@@ -15,5 +15,8 @@ router.get('/count', function(req, res, next) {
         });
     })
 });
+router.get('/img', function(req, res, next) {
+    res.render('test-img');
+});
 exports.router = router;
 exports.__path = '/test';
